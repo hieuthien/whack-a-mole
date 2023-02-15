@@ -218,11 +218,11 @@ function goMenu() {
 function getRandomTime() {
   switch (velocity_level) {
     case 0:
-      return Math.round(Math.random() * (1500 - 600) + 600);
+      return Math.round(Math.random() * (1500 - 600) + 600); // 1.5s
     case 1:
-      return Math.round(Math.random() * (1500 - 400) + 400);
+      return Math.round(Math.random() * (1500 - 400) + 400); // 1.5s
     case 2:
-      return Math.round(Math.random() * (450 - 450) + 450);
+      return Math.round(Math.random() * (450 - 450) + 450); // 0.45s
     default:
       return Math.round(Math.random() * (1500 - 400) + 400);
   }

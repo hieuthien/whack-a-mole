@@ -23,7 +23,9 @@
   text-transform: uppercase;
   gap: 1.5rem;
   z-index: 2;
-  /* display: none; */
+  background-image: url("./background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .modal.hide {
   display: none;
@@ -48,7 +50,7 @@
 }
 .modal .title span {
   display: block;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 .modal .help {
@@ -73,24 +75,31 @@
 .modal .buttons button {
   width: 15rem;
   height: 4rem;
-  font-size: 1.5rem;
-  font-weight: lighter;
-  color: #000;
-  border: 0;
-  border-radius: 50rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  border-radius: 12px;
   letter-spacing: 1px;
   cursor: pointer;
   outline: none;
-  box-shadow: none;
   text-transform: uppercase;
-  transition: all 150ms ease-in;
+  color: #fff;
+  text-shadow: 0 1px 3px #000;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 4px ridge hsl(201deg 43% 60% / 33%);
+  border-left: 4px groove hsl(201deg 43% 60% / 33%);
+  border-right: 4px ridge hsl(201deg 43% 60% / 33%);
+  border-bottom: 4px groove hsl(201deg 43% 60% / 33%);
+  box-shadow: inset 0px 0px 5px 3px rgb(1 1 1 / 30%);
+  transition: all 200ms ease-in;
 }
-.modal .buttons button:nth-child(1) {background-color: #00a8ff; color: #fff;}
-.modal .buttons button:nth-child(1):hover {background-color: #00b4f5;}
-.modal .buttons button:nth-child(2) {background-color: #4cd137; color: #fff;}
-.modal .buttons button:nth-child(2):hover {background-color: #44c738;}
-.modal .buttons button:nth-child(3) {background-color: #e84118; color: #fff;}
-.modal .buttons button:nth-child(3):hover {background-color: #db4116;}
+.modal .buttons button:nth-child(1) {background: radial-gradient(circle, #00a8ff, #00a8ff); color: #fff;}
+.modal .buttons button:nth-child(1):hover {background: radial-gradient(circle, #57c8ff, #00a8ff);}
+.modal .buttons button:nth-child(2) {background: radial-gradient(circle, #4cd137, #4cd137); color: #fff;}
+.modal .buttons button:nth-child(2):hover {background: radial-gradient(circle, #5de14a, #4cd137);}
+.modal .buttons button:nth-child(3) {background: radial-gradient(circle, #e84118, #e84118); color: #fff;}
+.modal .buttons button:nth-child(3):hover {background: radial-gradient(circle, #e85835, #e84118);}
 .modal .buttons button:nth-child(4) {background-color: #000; color: #fff;}
 .modal .buttons button:active {
   transform: scale(0.95);
@@ -154,7 +163,6 @@ body {
   padding: 10px;
   border-radius: 5px;
   background-color: #00000055;
-  border: 3px solid #111;
 }
 
 .view .controls .time, 
@@ -193,7 +201,7 @@ main .side-controls--container {
   width: max-content;
   height: max-content;
   background-color: #00000055;
-  border: 3px solid #111;
+  /*border: 3px solid #111;*/
   display: grid;
   border-radius: 5px;
   gap: 1rem;
@@ -205,29 +213,25 @@ main .side-controls--container div {position: relative;cursor: pointer;}
 main .side-controls--container .settings {
   height: 2.5rem;
   width: 2.5rem;
-  -webkit-filter: drop-shadow(1px 1px 0px 1px #00000020);
-  filter: drop-shadow(1px 1px 0px 1px #00000020);
+  filter: drop-shadow(1px 0px 1px rgba(0, 0, 0, 0.2));
   margin: auto;
 }
 main .side-controls--container .velocity-level {
   height: 2.5rem;
   width: 2.5rem;
-  -webkit-filter: drop-shadow(1px 1px 0px 1px #00000020);
-  filter: drop-shadow(1px 1px 0px 1px #00000020);
+  filter: drop-shadow( 1px 0px 1px rgba(0, 0, 0, 0.2));
   margin: auto;
 }
 main .side-controls--container .time-level {
   height: 2.5rem;
   width: 2.5rem;
-  -webkit-filter: drop-shadow(1px 1px 0px 1px #00000020);
-  filter: drop-shadow(1px 1px 0px 1px #00000020);
+  filter: drop-shadow( 1px 0px 1px rgba(0, 0, 0, 0.2));
   margin: auto;
 }
 main .side-controls--container .volume-level {
   height: 2.5rem;
   width: 2.5rem;
-  -webkit-filter: drop-shadow(1px 1px 0px 1px #00000020);
-  filter: drop-shadow(1px 1px 0px 1px #00000020);
+  filter: drop-shadow( 1px 0px 1px rgba(0, 0, 0, 0.2));
   margin: auto;
 }
 main .side-controls--container img {
@@ -262,8 +266,7 @@ main .side-controls--container span.none {display: none;}
 
 .hole {
   background: #00000055;
-  border-radius: 5px;
-  border: 3px solid #111;
+  border-radius: 8px;
   position: relative;
   overflow: hidden;
 }
